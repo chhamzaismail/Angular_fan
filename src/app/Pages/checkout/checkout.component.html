@@ -1,0 +1,262 @@
+<div>
+    <div class="product_main">
+        <div class="container">
+            <div class="pages_banner">
+                <p class="banner_description">Home/Royal Fans/Floarl AC/DC/Cart/Checkout</p>
+                <h1 class="banner_heading heading_primary">Checkout</h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="checkout_main">
+        <div class="container">
+            <div class="row">
+                
+             
+                <div class="col-sm-7 Contact_form">
+                    <!-- @if(message){
+                        <div class="alert alert-success text-center" role="alert">
+                            {{message}}
+                          </div>
+                        } -->
+                        <div class="stepper_tabs_main  ">
+                            <div class="d-flex justify-content-between">
+                                <div class="stepper_tab stepper_tab_active">
+                                    <i class="fa-light fa-user"></i>
+                                </div>
+                               
+                                <div class="stepper_tab" [ngStyle]="{background: bg_color_truck ,color: color_truck }">
+                                    <i class="fa-light fa-truck"></i>
+                                </div>
+                                <div class="stepper_tab" [ngStyle]="{background: bg_color_pad ,color: color_pad }">
+                                    <i class="fa-light fa-memo-pad"></i>
+                                </div>
+                                <div class="stepper_tab" [ngStyle]="{background: bg_color_check ,color: color_check }">
+                                    <i class="fa-regular fa-circle-check" ></i>
+                                </div>
+
+                            </div>
+                            <div class="stepper_line_outer">
+                                <div class="stepper_line_inner" [ngStyle]="{width : steperline}"></div>
+                            </div>
+                        </div>
+                    <!-- <form [formGroup]="orderDetailsForm">  -->
+                    <form [formGroup]="contactForm"> 
+                        <!-- Contact Information Form -->
+                        
+                        <div class="contact_information" *ngIf="step == 1">
+                            <h2 class="heading_secondary font_blue mb-4">Contact Information</h2>
+                            <label>Title <span >*</span></label>
+                            <!-- <div>
+                                <div class="filter_checkbox">
+                                    <input type="radio" name="title"   class="btn-check" id="designer_filter1" autocomplete="off">
+                                    <label class="btn" for="designer_filter1" formControlName="title">Mr</label>
+                                </div>
+                                <div class="filter_checkbox">
+                                    <input type="radio" name="title" class="btn-check" id="designer_filter2" autocomplete="off">
+                                    <label class="btn" for="designer_filter2" formControlName="title">Mrs</label>
+                                </div>
+                                <div class="filter_checkbox">
+                                    <input type="radio" name="title"   class="btn-check" id="designer_filter3" autocomplete="off">
+                                    <label class="btn" for="designer_filter3" formControlName="title">Miss</label>
+                                </div>
+                            </div> -->
+                           
+                            <div class="select_btn">
+                                <div class="filter_checkbox">
+                                    <input type="checkbox" class="btn-check" id="designer_filter1a" autocomplete="off" name="title" formControlName="title">
+                                    <label class="btn" for="designer_filter1a">Mr</label>
+                                </div>
+                                <div class="filter_checkbox">
+                                    <input type="checkbox" class="btn-check" id="designer_filter2a" autocomplete="off" name="title" formControlName="title">
+                                    <label class="btn" for="designer_filter2a">Mrs</label>
+                                </div>
+                                <div class="filter_checkbox">
+                                    <input type="checkbox" class="btn-check" id="designer_filter3a" autocomplete="off" name="title" formControlName="title">
+                                    <label class="btn" for="designer_filter3a">Miss</label>
+                                </div>
+                            </div>
+                            @if(f.title.errors && submitted ){
+                                <div>
+                                    @if(submitted && f.title.errors.required){
+                                        <span class="text-danger">Title field is required</span>
+                                    }
+                                 
+                                </div>
+                            }
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="mb-2 mt-4">First Name <span >*</span></label>
+                                    <input  class="w-100 form-control" formControlName="f_name" type="text" name="f_name" placeholder="Enter your first name" >
+                                     @if(f.f_name.errors && submitted ){
+                                    <div>
+                                        @if(submitted && f.f_name.errors.required){
+                                            <span class="text-danger"> FirstName field is required</span>
+                                        }
+                                    </div>
+                                }
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="mb-2 mt-4">Last Name <span >*</span></label>
+                                    <input class="w-100 form-control" formControlName="l_name" type="text" name="l_name" placeholder="Enter your last name" >
+                                         @if(f.l_name.errors && submitted ){
+                                    <div>
+                                        @if(submitted && f.l_name.errors.required){
+                                            <span class="text-danger">LastName field is required</span>
+                                        }
+                                    </div>
+                                }
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="mb-2 mt-5">Mobile Number <span >*</span></label>
+                                    <input class="w-100 form-control" formControlName="phone" type="tel" name="phone" placeholder="+92" >
+                                    @if(submitted && f.phone.errors ){
+                                        <div>
+                                            @if(submitted && f.phone.errors.required){
+                                                <span class="text-danger">Phone field is required</span>
+                                            }
+                                            @if(submitted && f.phone.errors.pattern){
+                                                <span class="text-danger">Phone no should be in numbers</span>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="mb-2 mt-5">Email Address <span >*</span></label>
+                                    <input class="w-100 form-control" type="email" formControlName="email" name="email" placeholder="Enter your email address" >
+                                    @if(f.email.errors && submitted ){
+                                        <div>
+                                            @if(f.email.errors.required){
+                                                <span class="text-danger">Email field is required</span>
+                                            }@if(f.email.errors.email){
+                                                <span class="text-danger">Enter valid email address</span>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                             
+                            </div>
+                            <button type="submit"  class="btn btn-secondary" (click)="contactInfo()">Continue</button>
+                        </div>
+                    </form>
+                        <!-- Delivery Address Form -->
+                    <form [formGroup]="addressForm">     
+                        <div class="delivery_form" *ngIf="step == 2">
+                            <h2 class="heading_secondary font_blue mb-4">Delivery Address</h2>
+                            <label class="mb-2 mt-4">Address line 1  <span >*</span></label>
+                            <input class="w-100 form-control" formControlName="address_1"  type="text" name="address_1" placeholder="Enter your address" >
+                            @if(f1.address_1.errors && submitted ){
+                                <div>
+                                    @if(submitted && f1.address_1.errors.required){
+                                        <span class="text-danger"> Address field is required</span>
+                                    }
+                                </div>
+                            }
+                            <label class="mb-2 mt-4">Address line 2 <span >*</span></label>
+                            <input class="w-100 form-control" formControlName="address_2"   type="text" name="" placeholder="Enter your address" >
+                            @if(f1.address_2.errors && submitted ){
+                                <div>
+                                    @if(submitted && f1.address_2.errors.required){
+                                        <span class="text-danger"> Address field is required</span>
+                                    }
+                                </div>
+                            }
+                            <label class="mb-2 mt-4">City <span >*</span></label>
+                            <select class="form-select" aria-label="Default select example" formControlName="city" >
+                                <option selected>-Select City-</option>
+                                <option value="Lahore" >Lahore</option>
+                                <option value="Karachi">Karachi</option>
+                                <option value="Gujaranwala">Gujaranwala</option>
+                                <option value="Islamabad">Islamabad</option>
+                            </select>
+                            @if(f1.city.errors && submitted ){
+                                <div>
+                                    @if(submitted && f1.city.errors.required){
+                                        <span class="text-danger"> City field is required</span>
+                                    }
+                                </div>
+                            }
+                            <button class="btn btn-secondary" (click)="addressInfo()">Continue</button>
+                        </div>
+                        <div class="term_conditions" *ngIf="step == 3">
+                            <h2 class="heading_secondary font_blue mb-4">Term & Conditions</h2>
+                            <p class="description">If there is any fault in the fan, the motor will be replaced free of cost with-in the 2 years from date of purchase. If there is any fault in the fan due to following reasons, in that case company will charge customer for replacement/fixing the parts/motor.</p>
+                            <ul>
+                                <li>If the customer tries to repair the fan themselves or gets it repaired from somewhere else.</li>
+                                <li>If the fan is damaged due falling or hit by some other object.</li>
+                                <li>If fan is damaged due to water.</li>
+                            </ul>
+                            <p class="description_2">Important instructions</p>
+                            <ul>
+                                <li>Keep your fan safe from water and dust</li>
+                                <li>Do not touch the fan while its operating</li>
+                                <li>Preferably get the fan installed by a professional electrician</li>
+                            </ul>
+                            <p class="description_2">Warranty</p>
+                            <ul>
+                                <li>If there is any problem with the fan, contact our authorized dealership and bring along the guarantee card</li>
+                               <li>For online customers, your order number and/or the mobile number which was provided at time of order will be considered as your guarantee card</li>
+                            </ul>
+                            <button  class="btn btn-secondary" (click)="confirmOrder()">Confirm Order</button>
+                            <div class="cancel_btn_main text-center mt-5">
+                                <button  class="cancel_btn" (click)="cancelOrder()">Cancel</button>  
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="order_confirm" *ngIf="step == 4">
+                        <img src="../assets/images/check.png" alt="">
+                        <h2 class="heading_secondary font_blue mb-4 mt-4">Term & Conditions</h2>
+                        <p class="description">Your order is confirmed. Check your confirmation email. If no email in your inbox kindly check spam as well.</p>
+                        <div class="order_number d-flex">
+                            <p class="description_2">Order Number:</p>
+                            <p class="description_2 font_blue ms-4">123546878</p>
+                            
+                        </div>
+                        <p class="description_2">You will be automatically redirect to our site's home page in 30 seconds.</p>
+                        <a routerLink="/"  class="btn btn-secondary">Return to homepage</a>
+                    </div>
+                    <!-- </form> -->
+                </div>
+                <div class="col-sm-5">
+                    <div class="order_form">
+                        <div class="d-flex ">
+                            <div>
+                                <img src="../assets/images/pd_1.png" alt="">
+                            </div>
+                            <div class=" cart_product_detail mt-2 ms-4">
+                                    <h2 class="heading_third">Floral AC/DC</h2>
+                                    <p class="description_2 font_blue">RS 5,999/-</p>
+                                    <div class="d-flex justify-content-between ">
+                                        <p class="description color  ">Off White</p>
+                                        <p class="description size ms-4">56''</p>
+                                        <p class="description style ms-4">s02</p>
+                                    </div>
+                            </div>
+
+                        </div>
+                        <div class="d-flex justify-content-between mt-5">
+                            <p class="">Floral AC/DC</p>
+                            <div>RS 5,999</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p class="">Number of Product</p>
+                            <div>3</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p class="">Subtotal</p>
+                            <div>RS 5,999</div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p class="">Total</p>
+                            <div>RS 5,999</div>
+                        </div>
+                        <p class="text_description">Text Included</p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.inner_swipper_main{
+    padding-bottom: 60px;
+}
+.inner_swiper{
+    background-color: #ffffff   ;
+    padding: 25px 33px;
+    border-radius: 10px;
+    height: 142px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.inner_swiper img{
+    width: 100%;
+}

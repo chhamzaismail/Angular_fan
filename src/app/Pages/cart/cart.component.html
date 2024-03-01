@@ -1,0 +1,111 @@
+<div>
+    <div class="product_main">
+        <div class="container">
+            <div class="pages_banner">
+                <p class="banner_description">Home/Royal Fans/Floarl AC/DC/Cart</p>
+                <h1 class="banner_heading heading_primary">Cart</h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="cart_main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h2 class="heading_secondary font_blue mb-4">Cart</h2>
+                    <div class="cart_box d-flex justify-content-between">
+                        <div class="d-flex">
+                            <div>
+                                <img src="../assets/images/pd_1.png" alt="">
+                            </div>
+                            <div class=" cart_product_detail mt-2">
+                                    <h2 class="heading_third">Floral AC/DC</h2>
+                                    <p class="description_2 font_blue">RS 5,999/-</p>
+                                    <div class="d-flex">
+                                        <p class="description color ">Off White</p>
+                                        <p class="description size">56''</p>
+                                        <p class="description style">s02</p>
+                                    </div>
+                            </div>
+
+                        </div>
+                        <div class="text-end ">
+                            <div class="quantity-field d-flex  mb-5 justify-content-end" >
+                                <button class="value-button decrease-button" (click)="decreaseValue('min',5999)" ><i class="fa-light fa-arrow-left"></i></button>
+                                <input class="quantityInput " type="text" value="{{productQuantity}}" disabled>
+                                <button class="value-button increase-button" (click)="increaseValue('max',5999)" ><i class="fa-light fa-arrow-right"></i></button>
+                            </div>
+                            <a href="" class="remove_btn"><i class="fa-light fa-trash-can me-2"></i>Remove</a>	
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="cart_box d-flex justify-content-between">
+                        <div class="d-flex">
+                            <div>
+                                <img src="../assets/images/pd_1.png" alt="">
+                            </div>
+                            <div class=" cart_product_detail mt-2">
+                                    <h2 class="heading_third">Floral AC/DC</h2>
+                                    <p class="description_2 font_blue">RS 5,999/-</p>
+                                    <div class="d-flex">
+                                        <p class="description color ">Off White</p>
+                                        <p class="description size">56''</p>
+                                        <p class="description style">s02</p>
+                                    </div>
+                            </div>
+
+                        </div>
+                        <div class="text-end ">
+                            <div class="quantity-field d-flex  mb-5 justify-content-end" >
+                                <button class="value-button decrease-button" (click)="decreaseValue('min',5999)" ><i class="fa-light fa-arrow-left"></i></button>
+                                <input class="quantityInput " type="text" value="{{productQuantity}}" disabled>
+                                <button class="value-button increase-button" (click)="increaseValue('max',5999)" ><i class="fa-light fa-arrow-right"></i></button>
+                            </div>
+                            <a href="" class="remove_btn"><i class="fa-light fa-trash-can me-2"></i>Remove</a>	
+                        </div>
+                    </div>
+                    <hr>
+                   
+                </div>
+                <div class="col-sm-5">
+                    <div class="order_form">
+                        <form action="">
+                            <p class="">Promo Code</p>
+                            <div class="promo_input mt-3 d-flex">
+                                <input type="text" class="w-100">
+                                <button class="promo_btn">Validate</button>
+                            </div>
+                            <div class="d-flex justify-content-between mt-5">
+                                <p class="">Floral AC/DC</p>
+                                <div>RS 5,999</div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-2">
+                                <p class="">Number of Product</p>
+                                <div>{{productQuantity}}</div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-2">
+                                <p class="">Subtotal</p>
+                                <div>RS {{price}}</div>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mt-2">
+                                <p class="">Total</p>
+                                <div>RS {{price}}</div>
+                            </div>
+                            <p class="text_description">Text Included</p>
+                            <p class="text_description">Shipping charges vary depending on product/city and will be calculated in next step.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label ms-3 mt-2" for="flexCheckDefault">
+                                    I accept the <a href="">terms and conditions.</a>   
+                                </label>
+                            </div>
+                            <a routerLink="/checkout" class="btn btn-secondary">Order Now</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

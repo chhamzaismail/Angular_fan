@@ -1,0 +1,170 @@
+a{
+    text-decoration: none;
+}
+p{
+	margin-bottom: 0px;
+}
+.item_details li, .tab_details li{
+    list-style: disc;
+}
+.product_details_main{
+    background-color: #283D98;
+}
+.product_detail{
+    margin-top: 64px ;
+}
+swiper-slide{
+    width: 630px;
+    height: 500px;
+    text-align: center;
+}
+img{
+   height: 100%;
+}
+.gallery_main{
+    max-height: 520px;
+    background-color: #F8F8F8;
+}
+
+.gallery_bottom img{
+    border-radius: 10px;
+    width: 197px;
+    max-height: 151px;
+}
+.details h3{
+    margin-top: 38px;
+    font-size: 18px;
+}
+.details li{
+    margin-top: 20px;
+}
+.select_btn{
+    margin-top: 20px;
+}
+.color_checkbox, .filter_checkbox {
+    display: inline-block;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+.color_checkbox .btn {
+    border: 1px solid #C9C9C9 !important;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #C9C9C9;
+    position: relative;
+  }
+  .color_checkbox .btn-check:checked + .btn::before {
+    display: block;
+  }
+  .color_checkbox .btn::before {
+    font: var(--fa-font-regular);
+    content: "\f00c";
+    color: #DEDEDE;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  .filter_checkbox .btn {
+    background-color: #f5f5f5;
+    width: 85px;
+    height: 35px;
+  }
+  .filter_checkbox .btn-check:checked + .btn {
+    background-color: #283D98;
+    border-color: #283D98;
+    color: #fff;
+  }
+
+  .item_specifications{
+    margin:50px 0px;
+  }
+  .nav-tabs {
+    --bs-nav-tabs-border-width: 0px;
+    --bs-nav-tabs-border-color: none;
+  }
+  .nav{
+    gap:28px;
+  }
+ .nav-tabs .nav-link {
+    padding: 20px 44px;
+    background-color: #F5F5F5;
+    border-radius: 10px ;
+}
+.nav-tabs .nav-link.active, .nav-tabs .show > .nav-link {
+    padding: 20px 44px;
+    background-color: #283D98;
+    color:white
+}
+.social_links{
+    gap: 13px;
+    margin-bottom: 100px;
+}
+.social_links .icon_box {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5B5B5B;
+    font-size: 24px;
+    transition: 0.5s ease;
+  }
+  .social_links .icon_box:hover{
+    background-color: #283D98;
+    color: #fff;
+  }
+  @media only screen and (max-width: 1200px){
+    .gallery_bottom img{
+        width: 140px;
+    }
+    .gallery_main img{
+        width: 400px;
+    }
+ }
+  @media only screen and (max-width: 992px){
+    .gallery_bottom img{
+        width: 100px;
+    }
+    .gallery_main img{
+        width: 350px;
+    }
+ }
+  @media only screen and (max-width: 768px){
+    .gallery_bottom img{
+        width: 80px;
+    }
+    .gallery_main img{
+        width: 250px;
+    }
+ }
+  @media only screen and (max-width: 578px){
+    .gallery_bottom img{
+        width: 140px;
+    }
+    .gallery_main img{
+        width: 350px;
+    }
+    swi
+    .details{
+        margin-top: 20px;
+    }
+ }
+  @media only screen and (max-width: 481px){
+    .gallery_bottom img{
+        width: 120px;
+    }
+    swiper-slide{
+        height: 380px;
+    }
+    .social_links .icon_box {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+      }
+ }

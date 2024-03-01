@@ -1,0 +1,97 @@
+a{
+    font-family: 'Poppin_regular';
+    text-decoration: none;
+    color: inherit;
+}
+.product_main{
+    background-color: #283D98;
+}
+.product_listing{
+    margin-top: 95px;
+}
+.brands_main{
+    margin-top: 28px;
+    margin-bottom: 40px;
+}
+.brands_main h3, .price_main h3{
+    margin-bottom: 9px;
+}
+.filter_box_inner{
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 130px;
+    scrollbar-color: #ececec transparent;
+}
+.filter_checkbox {
+    display: inline-block;
+    margin-bottom: 12px;
+    margin-right: 12px;
+  }
+.filter_checkbox .btn-check + .btn {
+    background-color: #F5F5F5;
+   
+}
+.filter_checkbox .btn-check:checked + .btn {
+    background-color: #283D98;
+    border-color: #283D98;
+    color: #fff;
+}
+.price_main p{
+    margin-bottom: 50px;
+}
+.price_main .input-group{
+    margin-bottom: 18px;
+}
+label{
+    margin-bottom: 9px;
+    font-size: 14px
+}
+input{
+    font-size: 14px;
+    background-color:#f5f5f5 ;
+}
+.filter_btn{
+    gap: 12px;
+}
+.reset_btn{
+    padding: 13px 39px;
+    border: 1px solid rgb(205, 204, 204);
+    background-color: transparent;
+    color:  rgb(78, 78, 78);
+    transition: 0.3s ease;
+}
+.reset_btn:hover{
+    border: 1px solid #283D98;
+    background-color: #283D98;
+    color:  #fff;
+}
+.apply_btn{
+    border: 1px solid #283D98;
+    background-color: #283D98;
+    color:  #fff;
+    padding: 13px 60px !important;
+    transition: 0.3s ease;
+    
+}
+.apply_btn:hover{
+    background-color: transparent;
+    color:  #283D98;
+}
+.product_card{
+    position: relative;
+}
+@media only screen and (max-width: 992px){
+    .col-sm-3 {
+        width: 33%;
+      }
+ }
+@media only screen and (max-width: 810px){
+    .col-sm-3 {
+        width: 50%;
+      }
+ }
+@media only screen and (max-width: 481px){
+    .col-sm-3 {
+        width: 100%;
+      }
+ }

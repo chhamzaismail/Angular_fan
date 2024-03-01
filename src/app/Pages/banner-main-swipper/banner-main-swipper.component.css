@@ -1,0 +1,56 @@
+.main_banner{
+  margin-top: 65px;
+  margin-bottom: 40px;
+}
+.banner_left h1,.banner_left p{
+    font-weight: 300;
+    font-size: 45px;
+}
+/* .banner_left .btn-primary {
+    padding: 18px 38px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #283D98;
+  }
+  .banner_left .btn-primary:hover {
+    background-color: #283D98;
+    color: #fff;
+    border-color: #fff;
+  } */
+  .banner_btn{
+    margin-top: 60px;
+  }
+
+  @media only screen and (max-width:992px){
+    .main_banner{
+      margin-top: 65px;
+    }
+    .banner_right img{
+      width: 400px;
+    }
+    .banner_left h1,.banner_left p{
+      font-size: 35px;
+  }
+ }
+  @media only screen and (max-width:778px){
+
+    .banner_right img{
+      width: 300px;
+    }
+
+ }
+  @media only screen and (max-width:481px){
+    .main_banner{
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    .banner_right {
+      margin-top: 20px;
+    }
+    .banner_right img{
+      width: 400px;
+    }
+
+ }

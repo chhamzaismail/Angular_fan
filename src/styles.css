@@ -1,1 +1,242 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: Poppins_semibold;
+	src:url(./assets/fonts/Poppins-SemiBold.ttf) format("truetype");
+	/* src: url(./assets/fonts/Poppins-Medium.ttf) format("truetype"),
+	url(./assets/fonts/Poppins-Regular.ttf) format("truetype"),
+	url(./assets/fonts/Poppins-SemiBold.ttf) format("truetype"); */
+  }
+@font-face {
+	font-family: Poppin_regular;
+	src:url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+	/* src: url(./assets/fonts/Poppins-Medium.ttf) format("truetype"),
+	url(./assets/fonts/Poppins-Regular.ttf) format("truetype"),
+	url(./assets/fonts/Poppins-SemiBold.ttf) format("truetype"); */
+  }
+
+*, body, h1, h2, h3, h4, h5, h6{
+	outline: 0 !important;
+	font-family: 'Poppins_semibold';
+}
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+p{
+    margin-bottom: 0;
+}
+ul{
+    margin-bottom: 0;
+}
+li{
+	list-style: none;
+}
+/* Global */
+::-moz-selection { /* Code for Firefox */
+	background-color: rgba(255, 79, 134, 0.5);
+}
+::selection {
+	background-color: #EAEBF9;
+}
+
+
+/* Works on Firefox */
+*{
+  scrollbar-width: thin;
+  scrollbar-color: #393f47 #cccccc;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar{
+  width: 8px;
+}
+*::-webkit-scrollbar-track{
+  background: #cccccc;
+}
+*::-webkit-scrollbar-thumb{
+  background: #393f47;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+p,li,td,label{
+    font-family: 'Poppin_regular';
+}
+
+.banner_left .btn-primary ,.product_btn .btn-primary {
+    padding: 18px 38px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+	border-color: #283D98;
+    background-color: #fff;
+    color: #283D98;
+  }
+.banner_left .btn-primary:hover,.product_btn .btn-primary:hover  {
+	background-color: #283D98;
+	color: #fff;
+	border-color: #fff;
+}
+.btn-primary{
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 38px;
+	padding-right: 38px;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	background-color: #fff;
+	color: #283D98;
+	border: 1px solid #283D98;
+}
+
+.btn-primary:hover {
+	background-color: #283D98;
+	color: #fff;
+	border-color: #fff;
+  }
+.btn-secondary{
+background-color: #283D98 !important;
+padding-top: 20px !important;
+padding-bottom: 20px !important;
+width: 100%;
+color: #fff;
+border: none;
+border-radius: 10px;
+margin-top: 39px;
+}
+
+.font_blue{
+	color: #283D98
+}
+.heading_primary{
+	font-size: 45px;
+}
+.heading_secondary{
+	font-size: 35px;
+}
+.heading_third{
+	font-size: 20px;
+}
+.description_2{
+    font-size: 18px;
+}
+.description{
+    font-size: 16px;
+}
+/* Back To Top Button */
+#back_to_top_btn{
+	display: inline-block;
+	background-color: #283D98;
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	border-radius: 30px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#back_to_top_btn::after{
+	font-family: "Font Awesome 5 Pro";
+  	font-weight: 900;
+  	content: "\f077";
+	font-size: 22px;
+	color: #fff;
+}
+#back_to_top_btn:hover{
+	cursor: pointer;
+	background-color: #283D98;
+}
+#back_to_top_btn:active{
+	background-color: #4153a1;
+}
+#back_to_top_btn.show{
+	opacity: 1;
+	visibility: visible;
+}
+
+.pages_banner{
+    color: #fff;
+    padding-top: 47px;
+    padding-bottom: 57px;
+    text-align: center;
+}
+.pages_banner .banner_description{
+    font-size: 16px;
+}
+/* Product cards */
+.product_card{
+    background-color: #f8f8f8;
+    padding: 25px 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+.product_card:hover{
+    background-color: #283D98;;
+    color: #ffffff;
+}
+.product_img{
+    height: 260px;
+    text-align: center;
+}
+.product_card img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.cart_img{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #283D98;
+}
+.product_card:hover  .cart_img{
+    color:#ffffff;
+}
+.product_card p{
+ margin-top: 30px;
+ font-size: 16px;
+ color: #5B5B5B;
+}
+.product_card h5{
+ margin-top: 19px;
+ font-size: 20px;
+ color:#283D98 ;
+}
+.product_card:hover h5,.product_card:hover p{
+ color:#ffffff ;
+}
+.colors{
+    gap: 7px;
+    margin-top: 18px;
+}
+.colors div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid grey   ;
+
+}
+.colors .c1{
+    background-color: #fff;
+}
+.colors .c2{
+    background-color: #000;
+}
+.colors .c3{
+    background-color: #8E7113;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
