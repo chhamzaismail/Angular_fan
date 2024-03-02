@@ -58,6 +58,9 @@ span{
     font-size: 14px;
     margin-top: 10px;
 }
+.product_details{
+    gap: 10px;
+}
 .stepper_tabs_main{
     margin-bottom: 50px;
     position: relative;
@@ -89,4 +92,33 @@ span{
 .stepper_tab_active{
     background-color: #283D98;
     color: #fff;
+}
+@media only screen and (max-width: 1100px){
+    .order_form{
+        padding: 20px;
+    }
+    .product_details{
+        gap: 5px;
+    }
+}
+@media only screen and (max-width: 992px){
+ .product_details_parent{
+    flex-direction: column;
+ }
+ .product_details_parent .ms-4{
+    margin-left: 0px !important;
+ }
+}
+@media only screen and (max-width: 576px){
+ .product_details_parent{
+    flex-direction: row;
+    
+ }
+ .order_form{
+    padding: 30px;
+    margin-top: 20px;
+}
+ .product_details_parent .ms-4{
+    margin-left: 20px !important;
+ }
 }

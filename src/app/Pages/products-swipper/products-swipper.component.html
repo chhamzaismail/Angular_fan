@@ -2,10 +2,10 @@
     <div class="d-flex justify-content-between">
         <h1 class="product_main_heading">Pak Fans</h1>
         <div class="swipper_btn d-flex ">
-            <div class="prev_btn swiper-button-prev " part="button-prev">
+            <div class="prev_btn  " part="button-prev">
                 <i class="fa-light fa-arrow-left"></i>
             </div>
-            <div class="next_btn swiper-button-next" part="button-prev" >
+            <div class="next_btn " part="button-prev" >
                 <i class="fa-light fa-arrow-right"></i>
             </div>
         </div>
@@ -13,7 +13,7 @@
     <p class="product_main_description">Mirum est notare quam littera gothica quam nunc putamus parum claram!</p>
    
     <swiper-container class="mySwiper2 product_swipper"  space-between="38"
-    [slidesPerView]="slidesPerView"  loop="true" navigation="true">
+    [slidesPerView]="slidesPerView"  loop="true" >
         <!-- <div class=" swiper-button-prev " part="button-prev" >
             <i class="fa-light fa-arrow-left"></i>
         </div>
@@ -140,10 +140,21 @@
         <a class="btn btn-primary" routerLink="product">See All Products</a>
       </div>
     
-      <h1 class="product_main_heading">Royal Fans</h1>
+     
+      <div class="d-flex justify-content-between">
+        <h1 class="product_main_heading">Royal Fans</h1>
+        <div class="swipper_btn d-flex ">
+            <div class="prev_btn  " part="button-prev">
+                <i class="fa-light fa-arrow-left"></i>
+            </div>
+            <div class="next_btn " part="button-prev" >
+                <i class="fa-light fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
       <p class="product_main_description">Mirum est notare quam littera gothica quam nunc putamus parum claram!</p>
     <swiper-container class="mySwiper2 product_swipper"  space-between="38"
-    [slidesPerView]="slidesPerView" loop="true" navigation="true">
+    [slidesPerView]="slidesPerView" loop="true">
     <swiper-slide class="product_card ">
         <a routerLink="product_details">
             <div class="product_img">

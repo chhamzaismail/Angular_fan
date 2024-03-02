@@ -5,6 +5,8 @@
 .banner_left h1,.banner_left p{
     font-weight: 300;
     font-size: 45px;
+    line-height: 40px;
+    overflow: hidden;
 }
 /* .banner_left .btn-primary {
     padding: 18px 38px;
